@@ -11,6 +11,7 @@
 		493FCB4724789F50008D548D /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB4524789F50008D548D /* Screen.cpp */; };
 		493FCB4A2478A026008D548D /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FCB492478A026008D548D /* libSDL2-2.0.0.dylib */; };
 		493FCB4C2478A045008D548D /* libSDL2_image-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FCB4B2478A045008D548D /* libSDL2_image-2.0.0.dylib */; };
+		493FCB4F2478A36B008D548D /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB4D2478A36B008D548D /* Loader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		493FCB4624789F50008D548D /* Screen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Screen.hpp; sourceTree = "<group>"; };
 		493FCB492478A026008D548D /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2/2.0.12_1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		493FCB4B2478A045008D548D /* libSDL2_image-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_image-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2_image/2.0.5/lib/libSDL2_image-2.0.0.dylib"; sourceTree = "<group>"; };
+		493FCB4D2478A36B008D548D /* Loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Loader.cpp; sourceTree = "<group>"; };
+		493FCB4E2478A36B008D548D /* Loader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Loader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 			children = (
 				493FCB4524789F50008D548D /* Screen.cpp */,
 				493FCB4624789F50008D548D /* Screen.hpp */,
+				493FCB4D2478A36B008D548D /* Loader.cpp */,
+				493FCB4E2478A36B008D548D /* Loader.hpp */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				493FCB3E24789E63008D548D /* main.cpp in Sources */,
+				493FCB4F2478A36B008D548D /* Loader.cpp in Sources */,
 				493FCB4724789F50008D548D /* Screen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,5 @@
 #include "Engine/Screen.hpp"
+#include "Engine/Loader.hpp"
 
 int main() {
     SDL_Init(SDL_INIT_EVERYTHING);
@@ -16,6 +17,7 @@ int main() {
         }
     }
     
+    Loader::getInstance()->destroy();
     Screen::getInstance()->destroy();
     return 0;
 }

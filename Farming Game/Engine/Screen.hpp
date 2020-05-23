@@ -17,8 +17,9 @@ public:
     static Screen* getInstance();
     void init(std::string title, unsigned int width, unsigned int height);
     void destroy();
-    
     void close();
+    
+    void render(SDL_Texture* texture, SDL_Rect srcRect, SDL_Rect destRect, SDL_RendererFlip flip = SDL_FLIP_NONE);
     
     SDL_Window* getWindowContext();
     SDL_Renderer* getRenderingContext();

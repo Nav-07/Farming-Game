@@ -24,6 +24,10 @@ void Screen::close() {
     mIsOpen = false;
 }
 
+void Screen::render(SDL_Texture* texture, SDL_Rect srcRect, SDL_Rect destRect, SDL_RendererFlip flip) {
+    SDL_RenderCopyEx(mRenderer, texture, &srcRect, &destRect, 0.0, nullptr, flip);
+}
+
 SDL_Window* Screen::getWindowContext() {
     return mWindow;
 }
