@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		493FCB3E24789E63008D548D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB3D24789E63008D548D /* main.cpp */; };
+		493FCB4724789F50008D548D /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493FCB4524789F50008D548D /* Screen.cpp */; };
+		493FCB4A2478A026008D548D /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FCB492478A026008D548D /* libSDL2-2.0.0.dylib */; };
+		493FCB4C2478A045008D548D /* libSDL2_image-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FCB4B2478A045008D548D /* libSDL2_image-2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		493FCB3A24789E63008D548D /* Farming Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Farming Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		493FCB3D24789E63008D548D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		493FCB4524789F50008D548D /* Screen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
+		493FCB4624789F50008D548D /* Screen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Screen.hpp; sourceTree = "<group>"; };
+		493FCB492478A026008D548D /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2/2.0.12_1/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		493FCB4B2478A045008D548D /* libSDL2_image-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_image-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2_image/2.0.5/lib/libSDL2_image-2.0.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493FCB4C2478A045008D548D /* libSDL2_image-2.0.0.dylib in Frameworks */,
+				493FCB4A2478A026008D548D /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				493FCB3C24789E63008D548D /* Farming Game */,
 				493FCB3B24789E63008D548D /* Products */,
+				493FCB482478A025008D548D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +67,28 @@
 		493FCB3C24789E63008D548D /* Farming Game */ = {
 			isa = PBXGroup;
 			children = (
+				493FCB4424789F40008D548D /* Engine */,
 				493FCB3D24789E63008D548D /* main.cpp */,
 			);
 			path = "Farming Game";
+			sourceTree = "<group>";
+		};
+		493FCB4424789F40008D548D /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				493FCB4524789F50008D548D /* Screen.cpp */,
+				493FCB4624789F50008D548D /* Screen.hpp */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		493FCB482478A025008D548D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				493FCB4B2478A045008D548D /* libSDL2_image-2.0.0.dylib */,
+				493FCB492478A026008D548D /* libSDL2-2.0.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				493FCB3E24789E63008D548D /* main.cpp in Sources */,
+				493FCB4724789F50008D548D /* Screen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +269,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.12_1/lib,
+					/usr/local/Cellar/sdl2_image/2.0.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +283,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.12_1/lib,
+					/usr/local/Cellar/sdl2_image/2.0.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

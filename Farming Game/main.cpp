@@ -1,15 +1,21 @@
-//
-//  main.cpp
-//  Farming Game
-//
-//  Created by Navyan Pahwa on 23/5/20.
-//  Copyright © 2020 Nav. All rights reserved.
-//
+#include "Engine/Screen.hpp"
 
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    SDL_Init(SDL_INIT_EVERYTHING);
+    Screen::getInstance()->init("Farming Game", 640, 480);
+    
+    SDL_Event e;
+    while (Screen::getInstance()->isRunning()) {
+        SDL_PollEvent(&e);
+        switch (e.type) {
+            case SDL_QUIT:
+                Screen::getInstance()->close();
+                break;
+            default:
+                break;
+        }
+    }
+    
+    Screen::getInstance()->destroy();
     return 0;
 }
